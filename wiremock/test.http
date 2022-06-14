@@ -1,0 +1,16 @@
+###
+GET http://localhost:9000/items
+
+###
+POST http://localhost:9000/items
+Content-Type: application/json
+
+{
+    "name": "name"
+}
+
+###
+GET http://localhost:9000/items-file
+
+###
+GET http://localhost:9000/items-delay

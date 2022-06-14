@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/items-delay"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": 1,
+      "name": "item-name"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "fixedDelayMilliseconds": 1000
+  }
+}

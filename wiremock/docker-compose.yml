@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+  mockServer:
+    image: wiremock/wiremock:latest-alpine
+    volumes:
+      - "./dev/wiremock/:/home/wiremock/"
+    ports:
+      - 9000:8080
+    restart: on-failure
+    command:
+      - --verbose
+      - --disable-banner

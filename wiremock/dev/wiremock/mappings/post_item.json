@@ -1,0 +1,18 @@
+{
+    "request": {
+        "url": "/items",
+        "method": "POST",
+        "bodyPatterns": [
+            {
+                "equalToJson": {
+                    "name": "name"
+                },
+                "ignoreArrayOrder": false,
+                "ignoreExtraElements": false
+            }
+        ]
+    },
+    "response": {
+        "status": 201
+    }
+}
