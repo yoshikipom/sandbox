@@ -1,3 +1,4 @@
+#!/bin/bash
 while read id
 do
 if [ -n "${id}" ]; then
