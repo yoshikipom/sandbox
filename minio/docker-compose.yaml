@@ -5,9 +5,9 @@ services:
     container_name: minio
     environment:
       MINIO_ACCESS_KEY: root
-      MINIO_SECRET_KEY: password
+      MINIO_SECRET_KEY: miniopass
       MINIO_ROOT_USER: root
-      MINIO_ROOT_PASSWORD: password
+      MINIO_ROOT_PASSWORD: miniopass
     command:
       [
         'minio',
@@ -29,4 +29,4 @@ services:
     depends_on:
       - minio
     entrypoint: >
-      /bin/sh -c " until (/usr/bin/mc config host add myminio http://minio:9050 root password) do echo '...waiting...' && sleep 1; done; /usr/bin/mc mb myminio/mybucket; /usr/bin/mc anonymous set download myminio/mybucket; exit 0; "
+      /bin/sh -c " until (/usr/bin/mc config host add myminio http://minio:9050 root miniopass) do echo '...waiting...' && sleep 1; done; /usr/bin/mc mb myminio/mybucket; /usr/bin/mc anonymous set download myminio/mybucket; exit 0; "
