@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  example-localstack:
+    container_name: example-localstack
+    image: localstack/localstack:1.3.1
+    ports:
+      - 54566:4566
+    environment:
+      - DEFAULT_REGION=ap-northeast-1
+      - DOCKER_SOCK=/var/run/docker.sock
+      - DEBUG=1
+    volumes:
+      - example-localstack:/var/lib/localstack/
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./local_script:/etc/localstack/init/ready.d
+    networks:
+      example-network:
+
+networks:
+  example-network:
+volumes:
+  example-localstack:
