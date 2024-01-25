@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS mydb.t (
+    id INT PRIMARY KEY
+);
+
+INSERT INTO mydb.t (id) VALUES (1);
+INSERT INTO mydb.t (id) VALUES (2);
+INSERT INTO mydb.t (id) VALUES (3);
