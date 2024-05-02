@@ -2,7 +2,7 @@
 version: '3'
 services:
   mockServer:
-    image: wiremock/wiremock:latest-alpine
+    image: wiremock/wiremock:latest
     volumes:
       - "./dev/wiremock/:/home/wiremock/"
     ports:

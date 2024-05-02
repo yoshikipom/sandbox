@@ -1,5 +1,5 @@
 ###
-GET http://localhost:9000/items
+GET http://localhost:9000/items/1
 
 ###
 POST http://localhost:9000/items
@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:9000/items-file
+GET http://localhost:9000/items-file/1
 
 ###
-GET http://localhost:9000/items-delay
+GET http://localhost:9000/items-delay/1

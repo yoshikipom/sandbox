@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "url": "/items-delay"
+    "url": "/items-delay/1"
   },
   "response": {
     "status": 200,
